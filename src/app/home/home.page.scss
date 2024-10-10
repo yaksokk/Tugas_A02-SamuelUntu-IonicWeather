@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
 
-$size1: 17vw;
-$size2: 13vw;
-$size3: 10vw;
-$size4: 8vw;
-$size5: 7vw;
-$size6: 5vw;
-$size7: 4vw;
-$size8: 3vw;
-$size9: 2vw;
+$size1: 8em;
+$size2: 6em;
+$size3: 3em;
+$size4: 1.8em;
+$size5: 1.4em;
+
+
 
 ion-title {
   color: rgba(255, 255, 255, 0.8);
@@ -17,18 +15,18 @@ ion-title {
 ion-header {
   margin: auto;
   text-align: center;
---ion-text-color:#fff;
---background: transparent;
---ion-background-color: transparent;
---ion-toolbar-background: transparent;
---box-shadow: none;
-
+  --ion-text-color: #fff;
+  --background: transparent;
+  --ion-background-color: transparent;
+  --ion-toolbar-background: transparent;
+  --box-shadow: none;
 }
 
-ion-content{
+ion-content {
   height: 100%;
   --background: linear-gradient(135deg, #54a0f7 0%, #0c4fb3 100%) !important;
-  --ion-text-color:#222;
+  --ion-text-color: #222;
+  font-family: 'poppins', sans-serif;
 }
 
 .search {
@@ -38,7 +36,6 @@ ion-content{
 }
 
 .search-input {
-  font-family: 'poppins', sans-serif;
   color: #333;
   background-color: rgba(3, 28, 34, 0.4);
   flex: 1;
@@ -77,7 +74,6 @@ ion-content{
   margin-right: 7px;
 }
 
-
 .location-status {
   display: block;
   text-align: center;
@@ -87,12 +83,11 @@ ion-content{
   display: block;
   font-size: $size3;
   font-weight: bold;
-  padding-top: 0.2em;
 }
 
 .date {
   display: block;
-  font-size: $size7;
+  font-size: $size5;
 }
 
 ion-card.weather-card {
@@ -103,6 +98,7 @@ ion-card.weather-card {
   background-color: transparent;
   text-align: center;
   padding-bottom: 7px;
+  margin-top: 21px;
 }
 
 ion-card.weather-card img {
@@ -113,25 +109,27 @@ ion-card.weather-card img {
 
 ion-card.weather-card .temperature {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
+  margin: 7px 0;
 }
 
-ion-card.weather-card .weather-status{
-  margin: 0 21px;
+ion-card.weather-card .weather-status {
+  margin: 0 14px;
 }
-
 
 ion-card.weather-card ion-card-title {
   color: #FFF;
   font-size: $size1;
-  font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
+
 ion-card.weather-card .weather-status span {
   color: #FFF;
-  font-size: $size7;
-  font-family: 'poppins', sans-serif;
+  font-size: $size5;
   text-transform: capitalize;
+  font-weight: bold;
 }
 
 ion-card.weather-card .high-low {
@@ -140,56 +138,28 @@ ion-card.weather-card .high-low {
 }
 
 ion-card.weather-card .high,
-ion-card.weather-card .low{
+ion-card.weather-card .low {
   color: #FFF;
-  font-size: $size8;
-  font-family: 'poppins', sans-serif;
+  font-size: $size5;
   margin: 3px 0;
 }
 
-.details {
-  height: auto;
+
+.container-sunrise-sunset {
+  --background: transparent;
+  border-radius: 10px;
 }
 
-ion-card{
-  --box-shadow: none;
-  --border:none;
-  border: none;
-}
-
-ion-card-content {
-  font-size: $size7;
+.container-sunrise-sunset .wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 7px;
-  margin-bottom: 0;
 }
 
-ion-card-subtitle {
-  font-weight: normal;
-  margin-bottom: 1%;
-  font-size: $size6;
-}
-
-ion-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.blok{
---background: transparent;
---ion-background-color: transparent;
-border-radius: 10px;
-}
-
-.blok ion-icon,
-.blok ion-card-subtitle {
+.container-sunrise-sunset ion-icon,
+.container-sunrise-sunset span {
   color: #fff;
+  font-size: $size5;
+  margin: 2px 0;
 }
-
-
