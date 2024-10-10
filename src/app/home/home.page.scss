@@ -1,27 +1,195 @@
-#container {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
+
+$size1: 17vw;
+$size2: 13vw;
+$size3: 10vw;
+$size4: 8vw;
+$size5: 7vw;
+$size6: 5vw;
+$size7: 4vw;
+$size8: 3vw;
+$size9: 2vw;
+
+ion-title {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+ion-header {
+  margin: auto;
   text-align: center;
+--ion-text-color:#fff;
+--background: transparent;
+--ion-background-color: transparent;
+--ion-toolbar-background: transparent;
+--box-shadow: none;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content{
+  height: 100%;
+  --background: linear-gradient(135deg, #54a0f7 0%, #0c4fb3 100%) !important;
+  --ion-text-color:#222;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.search {
+  display: flex;
+  align-items: center;
+  margin: 7px 20px;
 }
 
-#container a {
-  text-decoration: none;
+.search-input {
+  font-family: 'poppins', sans-serif;
+  color: #333;
+  background-color: rgba(3, 28, 34, 0.4);
+  flex: 1;
+  padding: 7px 14px;
+  border: 2px solid #1B74C7;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
 }
+
+.search-input:focus {
+  background-color: #ffffff88;
+  border-color: #1B74C7;
+}
+
+.search-input::placeholder {
+  color: #fff;
+}
+
+.search-button {
+  font-family: 'poppins', sans-serif;
+  background-color: #1B74C7;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(92, 90, 90, 0.2);
+}
+
+.search-button ion-icon {
+  margin-right: 7px;
+}
+
+
+.location-status {
+  display: block;
+  text-align: center;
+}
+
+.city {
+  display: block;
+  font-size: $size3;
+  font-weight: bold;
+  padding-top: 0.2em;
+}
+
+.date {
+  display: block;
+  font-size: $size7;
+}
+
+ion-card.weather-card {
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  text-align: center;
+  padding-bottom: 7px;
+}
+
+ion-card.weather-card img {
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(92, 90, 90, 0.2);
+  width: 150px;
+}
+
+ion-card.weather-card .temperature {
+  display: flex;
+  flex-direction: row;
+}
+
+ion-card.weather-card .weather-status{
+  margin: 0 21px;
+}
+
+
+ion-card.weather-card ion-card-title {
+  color: #FFF;
+  font-size: $size1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+ion-card.weather-card .weather-status span {
+  color: #FFF;
+  font-size: $size7;
+  font-family: 'poppins', sans-serif;
+  text-transform: capitalize;
+}
+
+ion-card.weather-card .high-low {
+  display: flex;
+  flex-direction: column;
+}
+
+ion-card.weather-card .high,
+ion-card.weather-card .low{
+  color: #FFF;
+  font-size: $size8;
+  font-family: 'poppins', sans-serif;
+  margin: 3px 0;
+}
+
+.details {
+  height: auto;
+}
+
+ion-card{
+  --box-shadow: none;
+  --border:none;
+  border: none;
+}
+
+ion-card-content {
+  font-size: $size7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+
+ion-card-subtitle {
+  font-weight: normal;
+  margin-bottom: 1%;
+  font-size: $size6;
+}
+
+ion-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blok{
+--background: transparent;
+--ion-background-color: transparent;
+border-radius: 10px;
+}
+
+.blok ion-icon,
+.blok ion-card-subtitle {
+  color: #fff;
+}
+
+
